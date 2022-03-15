@@ -29,7 +29,7 @@ def Proceso(env, RAM, velocidad, inicial, proceso_num):
 
             yield env.timeout(NoProce/velocidad)   
             completado += NoProce
-            print("El proceso no. %s sale en  %f " % (proceso_num,round(env.now,4))) 
+            #print("El proceso no. %s sale en  %f " % (proceso_num,round(env.now,4))) 
         wating = random.randint(1,2)
         if (completado < cantproc) and (wating == 1):
             with Waitt.request() as Waitts:
